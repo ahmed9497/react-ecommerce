@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@500&display=swap');
+
+
+:root{
+  --primary-color: #175fac;
+  --blue: #95d398;
+    --indigo: #957cbd;
+    --purple: #6f42c1;
+    --pink: #a0607e;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #5f5740;
+    --green: #386442;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: rgb(58, 35, 77);
+    --gray: #6c757d;
+    --gray-dark: #5e6469;
+    --primary: #323436;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #1c5b9b;
+    --dark: #a9b5c0;
+}
+.light-theme {
+  --primary-color: #4d77a3;
+  --disabled-color: #6c757d;
+  --text-color:green
+}
+.dark-theme {
+  --primary-color: #9e4646;
+  --disabled-color: #4a4a4b;
+  --text-color:yellow;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* body {
+--primary-color:rgb(82, 42, 42);
+--color :red;
+color:red
+
+}*/
+body{
+  font-family: 'Montserrat';
+   padding-top: 55px; 
+}  
+.footer {
+  padding-top:60px;
+  margin-top:4rem;
+  font-family: 'Poppins';
+}
+.footer >div {
+  color:white;
+}
+.product{
+  height: 365px;
+  position: relative;
+  overflow: hidden;
+}
+.cart-btn {
+  background: red;
+  color:white;
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  right: 0; 
+ border: 0;
+ height: 35px;
+  width: 100%;
+ 
+  transition:bottom .5s  ease;
+
+}
+button:focus{
+outline:none;
+}
+.product:hover .cart-btn{
+  bottom: 0;
+}
+.product:hover{
+  border: 1px solid lightgray;
+  box-shadow: lightslategrey;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 12px 2px rgba(204,204,204,1);
+-moz-box-shadow: 0px 0px 12px 2px rgba(204,204,204,1);
+box-shadow: 0px 0px 12px 2px rgba(204,204,204,1);
+}
+.progress-container {
+  width: 100%;
+  height: 3px;
+  background: #ccc;
+  position: fixed;
+    z-index: 99;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.progress-bar {
+  height: 3px;
+  background: #c506f5;
+  width: 0%;
 }
